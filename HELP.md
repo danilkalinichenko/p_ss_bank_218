@@ -93,7 +93,7 @@
 <li><code>Feature/Refactor</code> - новый функционал или переработка существующего</li>
 <li><code>Bug</code> - таска на исправление бага до или после тестирования</li>
 <li><code>Reworking</code> - таска на исправлении замечаний после кросс или файнал ревью</li>
-<li><code>Backlog, ToDo, InProgress, CrossReview, FinalReview</code> - этапы прохождения задачи по борде</li>
+<li><code>Backlog, ToDo, InProgress, CrossReview, FinalReview</code> - этапы прохождения задачи в борде</li>
 </ul>
 
 ### Как выполнять задачи
