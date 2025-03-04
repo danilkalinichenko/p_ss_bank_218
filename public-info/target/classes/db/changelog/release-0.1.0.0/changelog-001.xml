@@ -5,7 +5,7 @@
         xsi:schemaLocation="
         http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
-    <changeSet author="Рустам" id="1672955251679-1">
+    <changeSet author="Sergey" id="1672955251679-1">
         <createTable remarks="банкомат" tableName="atm">
             <column autoIncrement="true" name="id" remarks="технический идентификатор" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="atm_pkey"/>
@@ -21,7 +21,7 @@
             <column name="branch_id" remarks="ссылка на отделение, где стоит банкомат(null, если не стоит в отделении)" type="BIGINT"/>
         </createTable>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-2">
+    <changeSet author="Sergey" id="1672955251679-2">
         <createTable remarks="аудит" tableName="audit">
             <column autoIncrement="true" name="id" remarks="технический идентификатор" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="audit_pkey"/>
@@ -46,7 +46,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-3">
+    <changeSet author="Sergey" id="1672955251679-3">
         <createTable remarks="реквизиты банка(общедоступная информация)" tableName="bank_details">
             <column autoIncrement="true" name="id" remarks="технический идентификатор" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="bank_details_pkey"/>
@@ -74,7 +74,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-4">
+    <changeSet author="Sergey" id="1672955251679-4">
         <createTable remarks="отделение банка" tableName="branch">
             <column autoIncrement="true" name="id" remarks="технический идентификатор" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="branch_pkey"/>
@@ -96,7 +96,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-5">
+    <changeSet author="Sergey" id="1672955251679-5">
         <createTable remarks="сертификат" tableName="certificate">
             <column autoIncrement="true" name="id" remarks="технический идентификатор" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="certificate_pkey"/>
@@ -109,7 +109,7 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-6">
+    <changeSet author="Sergey" id="1672955251679-6">
         <createTable remarks="лицензия" tableName="license">
             <column autoIncrement="true" name="id" remarks="технический идентификатор" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="license_pkey"/>
@@ -122,28 +122,28 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-7">
+    <changeSet author="Sergey" id="1672955251679-7">
         <addUniqueConstraint columnNames="bik" constraintName="bank_details_bik_key" tableName="bank_details"/>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-8">
+    <changeSet author="Sergey" id="1672955251679-8">
         <addUniqueConstraint columnNames="cor_account" constraintName="bank_details_cor_account_key" tableName="bank_details"/>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-9">
+    <changeSet author="Sergey" id="1672955251679-9">
         <addUniqueConstraint columnNames="inn" constraintName="bank_details_inn_key" tableName="bank_details"/>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-10">
+    <changeSet author="Sergey" id="1672955251679-10">
         <addUniqueConstraint columnNames="kpp" constraintName="bank_details_kpp_key" tableName="bank_details"/>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-11">
+    <changeSet author="Sergey" id="1672955251679-11">
         <addUniqueConstraint columnNames="phone_number" constraintName="branch_phone_number_key" tableName="branch"/>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-12">
+    <changeSet author="Sergey" id="1672955251679-12">
         <addForeignKeyConstraint baseColumnNames="bank_details_id" baseTableName="certificate" constraintName="bank_details__certificate_fk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="bank_details"/>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-13">
+    <changeSet author="Sergey" id="1672955251679-13">
         <addForeignKeyConstraint baseColumnNames="bank_details_id" baseTableName="license" constraintName="bank_details__license_fk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="bank_details"/>
     </changeSet>
-    <changeSet author="Рустам" id="1672955251679-14">
+    <changeSet author="Sergey" id="1672955251679-14">
         <addForeignKeyConstraint baseColumnNames="branch_id" baseTableName="atm" constraintName="branch__atm_fk" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="branch"/>
     </changeSet>
 </databaseChangeLog>
